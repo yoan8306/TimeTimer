@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F55515A29DA108C00701EB0 /* UrgentSimpleTone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F55515929DA108C00701EB0 /* UrgentSimpleTone.wav */; };
+		5F72618729DC37E700174F3C /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F72618629DC37E700174F3C /* ColorPalette.swift */; };
+		5F72618929DC45C600174F3C /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F72618829DC45C600174F3C /* ProgressBar.swift */; };
 		5FBCDAAA29D7045E002E1D4C /* Time_TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDAA929D7045E002E1D4C /* Time_TimerApp.swift */; };
-		5FBCDAAC29D7045E002E1D4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDAAB29D7045E002E1D4C /* ContentView.swift */; };
 		5FBCDAAE29D70462002E1D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBCDAAD29D70462002E1D4C /* Assets.xcassets */; };
 		5FBCDAB129D70462002E1D4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBCDAB029D70462002E1D4C /* Preview Assets.xcassets */; };
-		5FBCDAB329D70462002E1D4C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDAB229D70462002E1D4C /* Persistence.swift */; };
-		5FBCDAB629D70462002E1D4C /* Time_Timer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDAB429D70462002E1D4C /* Time_Timer.xcdatamodeld */; };
 		5FBCDAC029D70462002E1D4C /* Time_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDABF29D70462002E1D4C /* Time_TimerTests.swift */; };
 		5FBCDACA29D70462002E1D4C /* Time_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDAC929D70462002E1D4C /* Time_TimerUITests.swift */; };
 		5FBCDACC29D70462002E1D4C /* Time_TimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDACB29D70462002E1D4C /* Time_TimerUITestsLaunchTests.swift */; };
+		5FBCDADD29D70525002E1D4C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDADC29D70525002E1D4C /* Timer.swift */; };
+		5FBCDADF29D772DD002E1D4C /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBCDADE29D772DD002E1D4C /* TimeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +38,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F55515929DA108C00701EB0 /* UrgentSimpleTone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UrgentSimpleTone.wav; sourceTree = "<group>"; };
+		5F72618629DC37E700174F3C /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		5F72618829DC45C600174F3C /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		5FBCDAA629D7045E002E1D4C /* Time Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBCDAA929D7045E002E1D4C /* Time_TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_TimerApp.swift; sourceTree = "<group>"; };
-		5FBCDAAB29D7045E002E1D4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5FBCDAAD29D70462002E1D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FBCDAB029D70462002E1D4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5FBCDAB229D70462002E1D4C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		5FBCDAB529D70462002E1D4C /* Time_Timer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Time_Timer.xcdatamodel; sourceTree = "<group>"; };
 		5FBCDABB29D70462002E1D4C /* Time TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBCDABF29D70462002E1D4C /* Time_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_TimerTests.swift; sourceTree = "<group>"; };
 		5FBCDAC529D70462002E1D4C /* Time TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBCDAC929D70462002E1D4C /* Time_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_TimerUITests.swift; sourceTree = "<group>"; };
 		5FBCDACB29D70462002E1D4C /* Time_TimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_TimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5FBCDADC29D70525002E1D4C /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		5FBCDADE29D772DD002E1D4C /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				5FBCDAA929D7045E002E1D4C /* Time_TimerApp.swift */,
-				5FBCDAAB29D7045E002E1D4C /* ContentView.swift */,
-				5FBCDAAD29D70462002E1D4C /* Assets.xcassets */,
-				5FBCDAB229D70462002E1D4C /* Persistence.swift */,
-				5FBCDAB429D70462002E1D4C /* Time_Timer.xcdatamodeld */,
+				5FBCDADB29D704A1002E1D4C /* ViewModel */,
+				5FBCDADA29D70498002E1D4C /* View */,
+				5FBCDAD929D7048C002E1D4C /* Model */,
+				5FBCDAD829D70470002E1D4C /* Supporting Files */,
 				5FBCDAAF29D70462002E1D4C /* Preview Content */,
 			);
 			path = "Time Timer";
@@ -111,6 +115,7 @@
 		5FBCDAAF29D70462002E1D4C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				5FBCDAAD29D70462002E1D4C /* Assets.xcassets */,
 				5FBCDAB029D70462002E1D4C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -131,6 +136,39 @@
 				5FBCDACB29D70462002E1D4C /* Time_TimerUITestsLaunchTests.swift */,
 			);
 			path = "Time TimerUITests";
+			sourceTree = "<group>";
+		};
+		5FBCDAD829D70470002E1D4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F55515929DA108C00701EB0 /* UrgentSimpleTone.wav */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FBCDAD929D7048C002E1D4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FBCDADA29D70498002E1D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FBCDADC29D70525002E1D4C /* Timer.swift */,
+				5F72618629DC37E700174F3C /* ColorPalette.swift */,
+				5F72618829DC45C600174F3C /* ProgressBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5FBCDADB29D704A1002E1D4C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FBCDADE29D772DD002E1D4C /* TimeManager.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FBCDAB129D70462002E1D4C /* Preview Assets.xcassets in Resources */,
+				5F55515A29DA108C00701EB0 /* UrgentSimpleTone.wav in Resources */,
 				5FBCDAAE29D70462002E1D4C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,9 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FBCDAB329D70462002E1D4C /* Persistence.swift in Sources */,
-				5FBCDAAC29D7045E002E1D4C /* ContentView.swift in Sources */,
-				5FBCDAB629D70462002E1D4C /* Time_Timer.xcdatamodeld in Sources */,
+				5F72618729DC37E700174F3C /* ColorPalette.swift in Sources */,
+				5FBCDADF29D772DD002E1D4C /* TimeManager.swift in Sources */,
+				5FBCDADD29D70525002E1D4C /* Timer.swift in Sources */,
+				5F72618929DC45C600174F3C /* ProgressBar.swift in Sources */,
 				5FBCDAAA29D7045E002E1D4C /* Time_TimerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,19 +631,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5FBCDAB429D70462002E1D4C /* Time_Timer.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5FBCDAB529D70462002E1D4C /* Time_Timer.xcdatamodel */,
-			);
-			currentVersion = 5FBCDAB529D70462002E1D4C /* Time_Timer.xcdatamodel */;
-			path = Time_Timer.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5FBCDA9E29D7045E002E1D4C /* Project object */;
 }
