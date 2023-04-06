@@ -24,7 +24,9 @@ struct TimerView: View {
                     .resizable()
                     .frame(width: 35,height: 35)
             }
-            .position(x: UIScreen.main.bounds.maxX - 60, y: UIScreen.main.bounds.minY + 15)
+            .padding()
+            
+            .position(x: UIScreen.main.bounds.maxX - 80, y: UIScreen.main.bounds.minY + 30)
             
             VStack(spacing: 20) {
                 Group {
@@ -35,16 +37,11 @@ struct TimerView: View {
                             Group {
                                 withAnimation {
                                     HStack {
-                                        Text("\(Int(timerManager.progress * CGFloat(timeSelected))) min")
+                                        Text(formatTimeRemaining())
                                             .font(.title)
-                                        if timerManager.progress * CGFloat(timeSelected) < 1 {
-                                            Text("\(Int(timerManager.progress * CGFloat(timeSelected * 60)) ) sec")
-                                                .font(.title2)
-                                                .foregroundColor(Color.red)
-                                        }
+                                            .foregroundColor((timerManager.progress * CGFloat(timeSelected) < 1) ? .red : .black)
                                     }
                                 }
-                                
                                 Text("remaining")
                                     .font(.title3)
                             }
@@ -52,7 +49,7 @@ struct TimerView: View {
                     }
                     .padding()
                 }
-  
+                
                 HStack(spacing: 80) {
                     Button(action: {
                         if timerManager.isTimerRunning {
@@ -65,16 +62,13 @@ struct TimerView: View {
                     }
                     
                     Button {
-//                        if !timerManager.isTimerRunning {
-                            timerManager.startTimer(during: CGFloat(timeSelected * 60))
-//                        }
+                        timerManager.startTimer(during: CGFloat(timeSelected * 60))
                         
                     } label: {
-                        Image(systemName: "play.circle")
+                        Image(systemName: (timerManager.playIsPressed) ? "pause.circle" : "play.circle")
                             .resizable()
                             .frame(width: 50, height: 50)
-                            .foregroundColor((timerManager.isTimerRunning) ? Color.red : Color.green)
-                            
+                            .foregroundColor((timerManager.playIsPressed) ? Color.red : Color.green)
                     }
                 }
                 
@@ -92,6 +86,14 @@ struct TimerView: View {
         }
         .padding(.horizontal, 25.0)
     }
+    
+    func formatTimeRemaining() -> String {
+        let minutesRemaining = Int(timerManager.progress * CGFloat(timeSelected))
+        let secondsElapsed = Int(((timerManager.progress * CGFloat(timeSelected))*60).truncatingRemainder(dividingBy: 60.0))
+        let formatSeconds = secondsElapsed < 10 ? String(format: "0%d", secondsElapsed) : String(secondsElapsed)
+        return "\(minutesRemaining):\(formatSeconds)"
+    }
+    
 }
 
 struct Timer_Previews: PreviewProvider {

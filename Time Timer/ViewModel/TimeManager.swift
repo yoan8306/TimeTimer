@@ -12,6 +12,7 @@ class TimerManager: ObservableObject {
     @Published var progress: CGFloat = 1.0
     @Published var isTimerRunning = false
     var audioPlayer: AVAudioPlayer?
+    @Published var playIsPressed = false
     
     private var timer: Timer? = nil
     var timing: [Int] {
@@ -24,25 +25,35 @@ class TimerManager: ObservableObject {
 
     func startTimer(during: CGFloat) {
         if isTimerRunning {
-            timer?.invalidate()
-//            progress = progress
-            isTimerRunning = false
+            if playIsPressed {
+                timer?.invalidate()
+                playIsPressed = false
+            } else {
+                launchTimer(during: during)
+                playIsPressed = true
+            }
         } else {
             self.progress = 1
-            timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
-                if self.progress > 0.0 {
-                    self.isTimerRunning = true
-                    self.progress -= 0.2 / during
-                } else {
-                    self.playSound()
-                    self.stopTimer()
-                }
+            launchTimer(during: during)
+        }
+    }
+    
+    func launchTimer(during: CGFloat) {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
+            if self.progress > 0.0 {
+                self.isTimerRunning = true
+                self.playIsPressed = true
+                self.progress -= 0.2 / during
+            } else {
+                self.playSound()
+                self.stopTimer()
             }
         }
     }
     
     func stopTimer() {
         isTimerRunning = false
+        playIsPressed = false
         timer?.invalidate()
         progress = 0
     }
