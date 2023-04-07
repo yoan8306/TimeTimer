@@ -39,7 +39,7 @@ struct TimerView: View {
                                     HStack {
                                         Text(formatTimeRemaining())
                                             .font(.title)
-                                            .foregroundColor((timerManager.progress * CGFloat(timeSelected) < 1) ? .red : .black)
+                                            .foregroundColor((timerManager.progress * CGFloat(timeSelected) < 1) ? .red : Color.primary)
                                     }
                                 }
                                 Text("remaining")
